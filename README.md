@@ -18,11 +18,11 @@ where:
 
 If you use the AWS Command Line Interface, you can list all available files, download an individual data file. You must use `--requester-payer requester` to indicate you realize your AWS account will be charged.
 
-    aws s3 ls nuview-opendata --request-payer requester
+    aws s3 ls nuview-state-opendata --request-payer requester
 
-    aws s3 ls s3://nuview-alaska-prod/ak_alaska_bare_earth/AGO_EVOS_Copper_River_2023/bare_earth/be_rasters/utm_zone_06/ --request-payer requester --human-readable --summarize
+    aws s3 ls s3://nuview-state-opendata/ak_alaska_bare_earth/AGO_EVOS_Copper_River_2023/bare_earth/be_rasters/utm_zone_06/ --request-payer requester --human-readable --summarize
 
-    aws s3 cp s3://nuview-alaska-prod/ak_alaska_bare_earth/AGO_EVOS_Copper_River_2023/bare_earth/be_rasters/utm_zone_06/UTM6_0315_0805_3_2024.cog.tiff --request-payer requester
+    aws s3 cp s3://nuview-state-opendata/ak_alaska_bare_earth/AGO_EVOS_Copper_River_2023/bare_earth/be_rasters/utm_zone_06/UTM6_0315_0805_3_2024.cog.tiff --request-payer requester
 
 ## Contact
 
