@@ -1,6 +1,6 @@
 # NUVIEW Multi-State Geospatial Data
 
-NUVIEW hosts and manages a unified collection of geospatial datasets from multiple U.S. states and agencies (LiDAR, orthophoto imagery, DEM/DSM, and derivative products). Data are organized in a single S3 bucket with a logical sub-folder hierarchy: `/state_or_agency_remote_sensing_type/acquisition_project_name/...` (ex. `ak_alaska_bare_earth/AGO_EVOS_Copper_River_2023`). All assets are cloud-optimized (COG GeoTIFFs, COPC (Cloud Optimized Point Cloud) LAZ point clouds, etc.) and available under open licenses.
+NUVIEW hosts and manages a unified collection of geospatial datasets from multiple U.S. states and agencies (LiDAR, orthophoto imagery, DEM/DSM, and derivative products). Data are organized in a single S3 bucket with a logical sub-folder hierarchy: `/state_or_agency_remote_sensing_type/acquisition_project_name/...` (ex. `ak_alaska_bare_earth/soa_copper_river_copper_river`). All assets are cloud-optimized (COG GeoTIFFs, COPC (Cloud Optimized Point Cloud) LAZ point clouds, etc.) and available under open licenses.
 
 See the [Registry of Open Data on AWS](https://registry.opendata.aws/nuview-state-opendata/) entry for this data set.
 
@@ -13,16 +13,16 @@ For example, the files for an individual bare earth lidar derived product are av
 where:
 
     state_or_agency_remote_sensing_type = `ak_alaska_bare_earth` - Alaska bare earth lidar derived
-    acqusition_project_name = `AGO_EVOS_Copper_River_2023` - state/agency defined name of an acqusition project
+    acqusition_project_name = `soa_copper_river_copper_river` - state/agency defined name of an acqusition project
     data path as defined in the USGS Lidar Base Specification for collections under the 3D Elevation Program = `bare_earth/be_rasters/utm_zone_06/UTM6_0315_0805_3_2024.cog.tiff`
 
 If you use the AWS Command Line Interface, you can list all available files, download an individual data file. You must use `--requester-payer requester` to indicate you realize your AWS account will be charged.
 
     aws s3 ls nuview-state-opendata --request-payer requester
 
-    aws s3 ls s3://nuview-state-opendata/ak_alaska_bare_earth/AGO_EVOS_Copper_River_2023/bare_earth/be_rasters/utm_zone_06/ --request-payer requester --human-readable --summarize
+    aws s3 ls s3://nuview-state-opendata/ak_alaska_bare_earth/soa_copper_river_copper_river/bare_earth/be_rasters/utm_zone_06/ --request-payer requester --human-readable --summarize
 
-    aws s3 cp s3://nuview-state-opendata/ak_alaska_bare_earth/AGO_EVOS_Copper_River_2023/bare_earth/be_rasters/utm_zone_06/UTM6_0315_0805_3_2024.cog.tiff --request-payer requester
+    aws s3 cp s3://nuview-state-opendata/ak_alaska_bare_earth/soa_copper_river_copper_river/bare_earth/be_rasters/utm_zone_06/UTM6_0315_0805_3_2024.cog.tiff --request-payer requester
 
 ## Contact
 
